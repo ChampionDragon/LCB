@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/fragment_four"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <com.lcb.view.RoundImageView
+        android:id="@+id/head"
+        android:layout_width="99dp"
+        android:layout_height="99dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="66dp"
+        android:src="@drawable/jx"
+        app:border_inside_color="@color/blueSky"
+        app:border_outside_color="@color/gold"
+        app:border_thickness="8dp"/>
+
+
+</LinearLayout>

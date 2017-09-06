@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_settings"/>
+
+</menu>
+
+    <!--   当你的应用程序目标设为蜂巢平台（即 Android 3.0）时，你可以利用Action Bar部件提供的全部功能，
+       将你的选项菜单项放在Action Bar的右上角，对用户来说使用更方便，控制该行为的主菜单项属性是android:showAsAction。　这个属性可接受的值有：
+       1.alaways:这个值会使菜单项一直显示在ActionBar上。
+       2.ifRoom:如果有足够的空间,这个值会使菜单显示在ActionBar上。
+       3.never:这个值菜单永远不会出现在ActionBar是。
+       4.withText:这个值使菜单和它的图标，菜单文本一起显示。-->
+
+    <!-- Android：orderInCategory
+     设置优先级，值越大优先级越低-->

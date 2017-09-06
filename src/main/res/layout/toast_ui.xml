@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blueSky"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="22dp" >
+
+    <LinearLayout
+        android:layout_width="@dimen/toast_height"
+        android:layout_height="@dimen/toast_width"
+        android:background="@color/transparent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/toast_iv"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/anim_loading" />
+
+        <TextView
+            android:id="@+id/toast_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="asdadadasdaddadadasd"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+<!-- 在父布局里面在嵌套一层布局从而改变toast布局大小 -->
+</LinearLayout>
+

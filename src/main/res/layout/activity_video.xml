@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/tt" >
+
+      <TextView
+          style="@style/tt_tv"
+          android:layout_centerInParent="true"
+          android:text="视频播放" />
+
+      <ImageView
+          android:id="@+id/back_video"
+          style="@style/tt_iv"
+          android:layout_alignParentLeft="true"
+          android:background="@drawable/title_im" />
+  </RelativeLayout>
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/popwindow_bottom"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/video_local"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/wifi_bg"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp"
+            android:text="本地播放"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/video_net"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/wifi_bg"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp"
+            android:text="网络播放"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</LinearLayout>

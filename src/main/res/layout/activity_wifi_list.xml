@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        style="@style/tt"
+        android:layout_width="match_parent" >
+
+        <TextView
+            style="@style/tt_tv"
+            android:layout_centerInParent="true"
+            android:text="WIFI设置" />
+
+        <ImageView
+            android:id="@+id/back_wifi_list"
+            style="@style/tt_iv"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/title_im" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/ScrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="11dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/check_wifi"
+                    style="@style/wifiBg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="11dp"
+                    android:layout_weight="1"
+                    android:text="@string/check_wifi_state" />
+
+                <Button
+                    android:id="@+id/scan_wifi"
+                    style="@style/wifiBg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/scan_wifi" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/open_wifi"
+                    style="@style/wifiBg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="11dp"
+                    android:layout_weight="1"
+                    android:text="@string/open_wifi" />
+
+                <Button
+                    android:id="@+id/close_wifi"
+                    style="@style/wifiBg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/close_wifi" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/jump_next"
+                style="@style/wifiBg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:text="获取已连接wifi信息" />
+
+            <TextView
+                android:id="@+id/tv_wifi_ssid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="11dp"
+                android:textColor="@color/red"
+                android:textSize="22sp" />
+
+            <ListView
+                android:id="@+id/wifi_list"
+                android:layout_width="match_parent"
+                android:layout_height="224dp" >
+            </ListView>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

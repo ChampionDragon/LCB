@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--水波纹颜色-->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+        android:color="@color/gray_shallow">
+   <!-- 添加mask就是有边界的波纹-->
+    <item android:id="@android:id/mask">
+        <!--前面罩住的圆圈-->
+        <shape android:shape="oval">
+            <solid android:color="@color/gray"/>
+        </shape>
+    </item>
+    <item >
+        <selector xmlns:android="http://schemas.android.com/apk/res/android">
+            <item android:state_pressed="true">
+                <shape>
+                    <corners android:radius="4dp"/>
+                    <solid android:color="@color/blueSky"/>
+                </shape>
+            </item>
+            <item android:state_pressed="false">
+                <shape>
+                    <solid android:color="@color/gold"/>
+                    <corners android:radius="4dp"/>
+                </shape>
+            </item>
+        </selector>
+    </item>
+</ripple>
+    <!--自定义水波纹-->
+    <!--注意：在低于API21的机子上运行程序会死掉。因为ripple水波只有
+    在api21以上sdk包里才有相应文件，低于21就会因为找不到文件而报错-->

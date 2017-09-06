@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/two_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="跳转类"
+        android:textColor="@color/red"/>
+
+    <RelativeLayout
+        android:layout_width="222dp"
+        android:layout_height="222dp">
+
+        <com.lcb.view.RoundProgressBar
+            android:id="@+id/prograssbar"
+            android:layout_width="166dp"
+            android:layout_height="166dp"
+            android:layout_centerInParent="true"
+            app:roundWidth="22dp"
+            app:textIsDisplayable="false"
+            app:textSize="22sp"/>
+
+        <ImageView
+            android:layout_width="166dp"
+            android:layout_height="6dp"
+            android:layout_centerInParent="true"
+            android:background="@color/white"
+            android:rotation="135"/>
+
+        <ImageView
+            android:layout_width="166dp"
+            android:layout_height="6dp"
+            android:layout_centerInParent="true"
+            android:background="@color/white"
+            android:rotation="90"/>
+
+        <ImageView
+            android:layout_width="166dp"
+            android:layout_height="6dp"
+            android:layout_centerInParent="true"
+            android:background="@color/white"
+            android:rotation="45"/>
+
+        <ImageView
+            android:layout_width="166dp"
+            android:layout_height="6dp"
+            android:layout_centerInParent="true"
+            android:background="@color/white"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/two_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/wifi_bg"
+        android:padding="18dp"
+        android:text="打 开"/>
+
+
+    <SeekBar
+        android:id="@+id/two_seekbar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:maxHeight="3dp"
+        android:progressDrawable="@drawable/seekbar_bg"
+        android:thumb="@drawable/seekbar"/>
+
+    <TextView
+        android:id="@+id/tv_seekbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"/>
+
+
+</LinearLayout>

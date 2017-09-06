@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_radioGroup"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/orange"
+    android:orientation="horizontal"
+    android:padding="5dp" >
+
+    <RadioButton
+        android:id="@+id/id_tab1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:button="@null"
+        android:checked="true"
+        android:drawableTop="@drawable/selector_tab1_img"
+        android:gravity="center"
+        android:text="WIFI"
+        android:textColor="@drawable/selector_tab_text_color" />
+
+    <RadioButton
+        android:id="@+id/id_tab2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:button="@null"
+        android:drawableTop="@drawable/selector_tab2_img"
+        android:gravity="center"
+        android:text="二维码"
+        android:textColor="@drawable/selector_tab_text_color" />
+
+    <RadioButton
+        android:id="@+id/id_tab3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:button="@null"
+        android:drawableTop="@drawable/selector_tab3_img"
+        android:gravity="center"
+        android:text="设置"
+        android:textColor="@drawable/selector_tab_text_color" />
+
+    <RadioButton
+        android:id="@+id/id_tab4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:button="@null"
+        android:drawableTop="@drawable/selector_tab4_img"
+        android:gravity="center"
+        android:text="用户"
+        android:textColor="@drawable/selector_tab_text_color" />
+
+</RadioGroup>

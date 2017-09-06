@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Champion Dragon\'s DEMO</string>
+    <string name="action_settings">action settting</string>
+    <string name="check_wifi_state">CHECK WIFI STATE</string>
+    <string name="realplay_loading">LOADING WAITING</string>
+    <string name="check_all_message">CHECKED WAS READ</string>
+
+</resources>

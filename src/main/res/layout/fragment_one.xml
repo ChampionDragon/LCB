@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <Button
+        android:id="@+id/bt_scan_wifi"
+        style="@style/wifiBg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="扫描连接wifi"/>
+
+    <Button
+        android:id="@+id/bt_start_ap"
+        style="@style/wifiBg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="开启wifi热点"/>
+
+    <Button
+        android:id="@+id/bt_socket"
+        style="@style/wifiBg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="Socket传输"/>
+
+    <Button
+        android:id="@+id/bt_ezviz"
+        style="@style/wifiBg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="萤石摄像头"/>
+
+</LinearLayout>

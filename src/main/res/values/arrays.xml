@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spannableStyle">
+        <item>前景颜色</item>
+        <item>后景颜色</item>
+        <item>文字相对大小</item>
+        <item>设置中划线</item>
+        <item>设置下划线</item>
+        <item>设置上标</item>
+        <item>设置下标</item>
+        <item>为文字设置风格</item>
+        <item>设置文本图片</item>
+        <item>设置可点击的文本</item>
+        <item>设置超链接文本</item>
+        <item>SpannableStringBuilder</item>
+    </string-array>
+</resources>

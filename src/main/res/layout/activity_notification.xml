@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:background="@color/blue"
+        android:orientation="horizontal"
+        android:paddingTop="11dp">
+
+        <ImageView
+            android:id="@+id/back_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="22dp"
+            android:background="@drawable/title_im"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="22dp"
+            android:text="通知DEMO"
+            android:textColor="@color/white"
+            android:textSize="22sp"/>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/wifi_bg"
+        android:padding="11dp"
+        android:text="通知"
+        />
+
+    <Button
+        android:id="@+id/notification_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/wifi_bg"
+        android:padding="11dp"
+        android:text="通过Service发起通知"
+        />
+
+    <Button
+        android:id="@+id/notification_service_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/wifi_bg"
+        android:padding="11dp"
+        android:text="停止Service"
+        />
+
+    <Button
+        android:id="@+id/notification_service_bind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/wifi_bg"
+        android:padding="11dp"
+        android:text="绑定Service"
+        />
+
+    <Button
+        android:id="@+id/notification_service_unbind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/wifi_bg"
+        android:padding="11dp"
+        android:text="解除绑定"
+        />
+
+
+</LinearLayout>
