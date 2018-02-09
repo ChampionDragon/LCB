@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <RelativeLayout style="@style/tt">
+
+        <TextView
+            style="@style/tt_tv"
+            android:layout_centerInParent="true"
+            android:text="设置车牌号码"/>
+
+        <ImageView
+            android:id="@+id/back_platenum"
+            style="@style/tt_iv"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/title_im"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="通过两个一级滑动选择车牌号"
+        android:textColor="@color/blueSky"
+        android:textSize="22sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:orientation="horizontal"
+        android:padding="11dp">
+
+        <TextView
+            android:id="@+id/platenum_oneone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawablePadding="3dp"
+            android:drawableRight="@drawable/pulldown"
+            android:text="赣"
+            android:textSize="22sp"/>
+
+        <TextView
+            android:id="@+id/platenum_onetwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawablePadding="3dp"
+            android:drawableRight="@drawable/pulldown"
+            android:text="A"
+            android:textSize="22sp"/>
+
+        <com.lcb.view.GridPasswordView.GridPasswordView
+            android:id="@+id/platenum_gpvone"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            app:gpvPasswordLength="5"
+            app:gpvTextSize="25sp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:gravity="center_horizontal"
+        android:text="通过二级滑动选择车牌号"
+        android:textColor="@color/blueSky"
+        android:textSize="22sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:orientation="horizontal"
+        android:padding="11dp">
+
+        <TextView
+            android:id="@+id/platenum_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawablePadding="3dp"
+            android:drawableRight="@drawable/pulldown"
+            android:text="赣A"
+            android:textSize="22sp"/>
+
+
+        <com.lcb.view.GridPasswordView.GridPasswordView
+            android:id="@+id/platenum_gpvtwo"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            app:gpvPasswordLength="5"
+            app:gpvTextSize="25sp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/platenum_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:gravity="center_horizontal"
+        android:text="保存数据的结果"
+        android:textColor="@color/red"
+        android:textSize="22sp"/>
+
+    <Button
+        android:id="@+id/platenum_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="33dp"
+        android:layout_marginRight="33dp"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/btn_bg"
+        android:text="保 存"
+        android:textColor="@color/white"
+        android:textSize="22sp"/>
+
+</LinearLayout>

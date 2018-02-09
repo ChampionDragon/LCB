@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        style="@style/tt"
+        android:layout_width="match_parent">
+
+        <TextView
+            style="@style/tt_tv"
+            android:layout_centerInParent="true"
+            android:text="TCP客户端" />
+
+        <ImageView
+            android:id="@+id/back_clientcontrol"
+            style="@style/tt_iv"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/title_im" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="left"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="服务IP地址："
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/edtSvrIpAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/popwindow_button"
+            android:paddingBottom="5dp"
+            android:paddingLeft="26dp"
+            android:paddingRight="26dp"
+            android:paddingTop="5dp"
+            android:text="192.168.0.103"
+            android:textColor="@drawable/textcolor" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="left"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="服务端口号：" />
+
+        <EditText
+            android:id="@+id/edtSvrPort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/popwindow_button"
+            android:inputType="number"
+            android:paddingBottom="5dp"
+            android:paddingLeft="26dp"
+            android:paddingRight="26dp"
+            android:paddingTop="5dp"
+            android:text="26565"
+            android:textColor="@drawable/textcolor" />
+
+        <Button
+            android:id="@+id/btnConnect"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/wifi_bg"
+            android:text="连接"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnOpenDevice"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/wifi_bg"
+            android:text="打开弹框"
+            android:textSize="15sp" />
+
+        <Button
+
+            android:id="@+id/btnCloseDevice"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/wifi_bg"
+            android:text="关闭弹框"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btnTestRes"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/wifi_bg"
+            android:text="定时弹框"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

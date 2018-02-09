@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_lcd"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/LcdHeightSplit"
+        android:layout_weight="1"
+        android:background="@color/blueSky">
+
+        <LinearLayout
+            android:id="@+id/lcdback"
+            style="@style/LcdWidthSplit"
+            android:layout_weight="1">
+
+            <ImageView
+                style="@style/LcdMainIv"
+                android:background="@drawable/quit"/>
+
+            <TextView
+                style="@style/LcdMainTv"
+                android:text="退出"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lcdcheck"
+            style="@style/LcdWidthSplit"
+            android:layout_weight="1">
+
+            <ImageView
+                style="@style/LcdMainIv"
+                android:background="@drawable/find"/>
+
+            <TextView
+                style="@style/LcdMainTv"
+                android:text="查看"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lcdSet"
+            style="@style/LcdWidthSplit"
+            android:layout_weight="1">
+
+            <ImageView
+                style="@style/LcdMainIv"
+                android:background="@drawable/setting"/>
+
+            <TextView
+                style="@style/LcdMainTv"
+                android:text="设置"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lcdVideo"
+            style="@style/LcdWidthSplit"
+            android:layout_weight="1">
+
+            <ImageView
+                style="@style/LcdMainIv"
+                android:background="@drawable/video"/>
+
+            <TextView
+                style="@style/LcdMainTv"
+                android:text="视频"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:background="@color/black">
+
+        <VideoView
+            android:id="@+id/lcdvideoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+    </LinearLayout>
+
+</LinearLayout>

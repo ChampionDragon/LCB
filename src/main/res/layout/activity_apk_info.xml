@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout style="@style/tt" >
+
+        <TextView
+            android:id="@+id/apkinfo_tv"
+            style="@style/tt_tv"
+            android:layout_centerInParent="true"
+            android:text="APK信息" />
+
+        <ImageView
+            android:id="@+id/back_apkinfo"
+            style="@style/tt_iv"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/title_im" />
+    </RelativeLayout>
+
+    <ListView
+        android:listSelector="@drawable/log_lv_item_bg"
+        android:dividerHeight="2dp"
+        android:id="@+id/apkinfo_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/blueSky" />
+
+</LinearLayout>
