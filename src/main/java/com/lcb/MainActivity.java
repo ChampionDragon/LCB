@@ -1,6 +1,7 @@
 package com.lcb;
 
 import android.app.ActivityManager;
+import android.app.KeyguardManager;
 import android.content.Context;
 import android.media.SoundPool;
 import android.os.Build;
@@ -61,19 +62,85 @@ public class MainActivity extends FragmentActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        cleanLockScreen();
         setContentView(R.layout.activity_main);
         initViews();
         initWindow();// 初始化界面窗口
         executor = AsyncTaskExecutor.getinstance();
         test();
-
     }
+
+    /*解除锁屏*/
+    private void cleanLockScreen() {
+        KeyguardManager keyguardManager
+                = (KeyguardManager) getSystemService(KEYGUARD_SERVICE);
+        KeyguardManager.KeyguardLock lock = keyguardManager.newKeyguardLock(KEYGUARD_SERVICE);
+        lock.disableKeyguard();
+    }
+
 
     private void test() {
+//        Logs.d(getResources().getDisplayMetrics().density + "   73");
+//        Logs.e(getResources().getDisplayMetrics().scaledDensity + "   74");
+//        Logs.d(getResources().getDisplayMetrics().heightPixels + "   屏幕高度");
+//        Logs.e(getStatusBarHeight() + "   获得状态栏高度");
 
+                /*判断是否有网*/
+//        if (!NetConnectUtil.NetConnect(this)) {
+//        DialogNotileUtil.show(this, "该环境下未连接网络");
+//        }
+
+//        final Dialog dialog = DialogLoadingUtil.CreatDialog(this);
+//        dialog.show();
+//        new Handler(){
+//            @Override
+//            public void handleMessage(Message msg) {
+//                super.handleMessage(msg);
+//                dialog.dismiss();
+//            }
+//        }.sendEmptyMessageDelayed(1,6666);
+
+        /*遍历项目文件夹文件*/
+//        File file = Constant.fileDir;
+//        if (file.exists()) {
+//            traversalFile(file);
+//        } else {
+//            boolean mkdir = file.mkdir();
+//            traversalFile(file);
+//        }
+//
+//    }
+
+    /*遍历文件夹里文件*/
+//    List<File> a = new ArrayList<>();
+//    private void traversalFile(File file) {
+//        if (file.isDirectory()) {
+//            File[] files = file.listFiles();
+//            for (File f : files) {
+//                if (f.isDirectory()) {
+//                    traversalFile(f);
+//                } else {
+//                    a.add(f);
+//                }
+//            }
+//        }
+//        for (File ff : a) {
+//            Logs.d(ff.getName());
+//        }
+//        a.clear();
 
     }
 
+
+    /*获得状态栏的高度*/
+    public int getStatusBarHeight() {
+        int result = 0;
+        int resourceId = getResources().getIdentifier("status_bar_height", "dimen", "android");
+        if (resourceId > 0) {
+            result = getResources().getDimensionPixelSize(resourceId);
+        }
+        return result;
+    }
 
     /*获得语言*/
     private void Langugae() {
@@ -220,7 +287,7 @@ public class MainActivity extends FragmentActivity {
         MyFragmentPagerAdapter adapter = new MyFragmentPagerAdapter(
                 getSupportFragmentManager(), fragmentList);
         pager.setAdapter(adapter);
-        pager.setOnPageChangeListener(new TabOnPageChangeListener());
+        pager.addOnPageChangeListener(new TabOnPageChangeListener());
         // pager.setOnTouchListener(touchListener);// 设置这个可以是pager不滑动
         radioGroup = (RadioGroup) findViewById(R.id.id_radioGroup);
         tab1 = (RadioButton) findViewById(R.id.id_tab1);
@@ -237,7 +304,7 @@ public class MainActivity extends FragmentActivity {
      * 添加页卡
      */
     private List<Fragment> getData() {
-        fragmentList = new ArrayList<Fragment>();
+        fragmentList = new ArrayList<>();
         OneFragment oneFragment = new OneFragment();
         TwoFragment twoFragment = new TwoFragment();
         ThreeFragment threeFragment = new ThreeFragment();

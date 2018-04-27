@@ -106,8 +106,7 @@ public class WifiInfoActivity extends BaseActivity {
 			
 			
 			adapter.add(new WifiBean("子网掩码", SmallUtil.intToString(netmask)));
-			adapter.add(new WifiBean("服务端地址", SmallUtil
-					.intToString(serverAddress)));
+			adapter.add(new WifiBean("服务端地址", SmallUtil.intToString(serverAddress)));
 			adapter.add(new WifiBean("连接速度", leaseDuration + ""));
 			adapter.add(new WifiBean("描述内容", describeContents + ""));
 			adapter.add(new WifiBean("DhcpStr", DhcpStr));

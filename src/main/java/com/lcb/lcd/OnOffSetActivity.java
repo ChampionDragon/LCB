@@ -47,8 +47,6 @@ public class OnOffSetActivity extends BaseActivity implements View.OnClickListen
         offHour = Integer.valueOf(split[0]);
         onMinutes = Integer.valueOf(split[1]);
         offMinute = Integer.valueOf(split[1]);
-
-
     }
 
     private void initView() {

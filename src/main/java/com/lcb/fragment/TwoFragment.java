@@ -22,6 +22,8 @@ import com.lcb.activity.chartViewActivity;
 import com.lcb.base.AsyncTaskExecutor;
 import com.lcb.constant.Constant;
 import com.lcb.pickerview.PickviewActivity;
+import com.lcb.utils.DialogAddId;
+import com.lcb.utils.DialogLogin;
 import com.lcb.utils.Logs;
 import com.lcb.utils.SmallUtil;
 import com.lcb.utils.TimeUtil;
@@ -37,6 +39,7 @@ public class TwoFragment extends Fragment implements OnClickListener {
     private int progress;
     private SeekBar mSeekBar;
     private TextView mTextView, menu;
+
     String tag = "twofragment";
 
     @Override
@@ -49,7 +52,6 @@ public class TwoFragment extends Fragment implements OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_two, container, false);
-        Logs.d("twoFragment 52");
         initView();
         return view;
     }
@@ -112,11 +114,9 @@ public class TwoFragment extends Fragment implements OnClickListener {
                 } else {
                     executor.submit(openRunnable);
                 }
-
                 ToastUtil.showLong(TimeUtil.long2time(System.currentTimeMillis(),
                         Constant.cformatsecond));
                 break;
-
             case R.id.two_menu:
                 showPopupMenu(menu);
                 break;
@@ -132,7 +132,6 @@ public class TwoFragment extends Fragment implements OnClickListener {
         PopupMenu popupMenu = new PopupMenu(getActivity(), menu);
 //        menu布局
         popupMenu.getMenuInflater().inflate(R.menu.activitys, popupMenu.getMenu());
-
 /*方法一：使用反射，强制显示菜单图标*/
 //        try {
 //            Field field = popupMenu.getClass().getDeclaredField("mPopup");
@@ -143,8 +142,6 @@ public class TwoFragment extends Fragment implements OnClickListener {
 //            e.printStackTrace();
 //            Logs.e(tag + "  137");
 //        }
-
-
 //        menu的item点击事件
         popupMenu.setOnMenuItemClickListener(menuItem);
 //        PopupMenu关闭事件
@@ -173,6 +170,25 @@ public class TwoFragment extends Fragment implements OnClickListener {
                     break;
                 case R.id.menu_three:
                     SmallUtil.getActivity(getActivity(), ChangeLanguageActivity.class);
+                    break;
+                case R.id.menu_four:
+
+                    DialogLogin dialogLogin = new DialogLogin(getActivity(), new DialogLogin.putDataListener() {
+                        @Override
+                        public void putData(String user, String psw) {
+                            Logs.d("账号:" + user + " " + "密码:" + psw);
+                        }
+                    });
+
+                    break;
+
+                case R.id.menu_five:
+                    DialogAddId idDialog=new DialogAddId(getActivity(), new DialogAddId.putIdListener() {
+                        @Override
+                        public void putId(String id) {
+                            Logs.v("输入的设备ID为："+id);
+                        }
+                    });
                     break;
             }
             return false;

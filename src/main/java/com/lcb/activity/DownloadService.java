@@ -56,14 +56,6 @@ public class DownloadService extends Service {
         initmsgBuilder();
     }
 
-    private void initmsgBuilder() {
-        msgBuilder = new Notification.Builder(this);
-        msgBuilder.setSmallIcon(R.drawable.ad3)
-                .setContentTitle("文件正在下载")
-                .setContentText("下载进度")
-                .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.ad2));
-    }
-
     /**
      * 初始化消息
      */
@@ -88,6 +80,14 @@ public class DownloadService extends Service {
 //        intents.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); //service跳转到activity一定要加这个
 //        PendingIntent pendingIntent = PendingIntent.getActivity(this, 2, intents, PendingIntent.FLAG_CANCEL_CURRENT);
 //        builder.setContentIntent(pendingIntent);
+    }
+
+    private void initmsgBuilder() {
+        msgBuilder = new Notification.Builder(this);
+        msgBuilder.setContentTitle("文件正在下载")
+                .setSmallIcon(R.drawable.ad3)//小图标一定要设置不然Notification状态栏显示不出来
+                .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.ad2))
+                .setContentText("下载进度");
     }
 
     @Override
@@ -150,8 +150,6 @@ public class DownloadService extends Service {
                 super.inProgress(progress, total, id);
 
                 myprogress = (int) (progress * 100);
-//                Logs.v(tag + "120 " + progress + "  " + "  " + defferent + "  " + myprogress);
-
 
                 if (myprogress == defferent) {
                     defferent = defferent + 20;
@@ -159,16 +157,12 @@ public class DownloadService extends Service {
                     if (myprogress > 0 && myprogress < 100) {
                         notifyMsg(myprogress);
                         Logs.d(tag + "  163 " + myprogress);
-                    } else if(myprogress==0){
+                    } else if (myprogress == 0) {
                         // 避免频繁刷新View，这里设置每下载10%提醒更新一次进度
                         notifyMsg("温馨提醒", "文件准备下载", myprogress);
                         Logs.e(tag + "  168 " + myprogress);
                     }
-
-
                 }
-
-
             }
         });
     }

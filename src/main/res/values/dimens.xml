@@ -8,7 +8,15 @@
     <!-- <dimen name="load" format="integer" type="dimen">444</dimen> -->
 
 
-    <!--pickerView-->
+    <!--+++++++++++++++++++++++++++++++++++++++LCD显示屏++++++++++++++++++++++++++++++++++++++++-->
+    <dimen name="lcdBtnheight">99dp</dimen>
+    <dimen name="lcdBtnmargin">99dp</dimen>
+    <dimen name="lcdtvTitle">88sp</dimen>
+    <dimen name="lcdtvContent">44sp</dimen>
+    <dimen name="onoffmargainleft">33dp</dimen>
+
+
+    <!-- ++++++++++++++++++++++++++++++++++++++  pickerView  ++++++++++++++++++++++++++++++++++++++++++++-->
     <!-- 顶部按钮栏高度 -->
     <dimen name="pickerview_topbar_height">44dp</dimen>
     <!-- 顶部按钮paddingLeft -->
@@ -24,7 +32,7 @@
     <bool name="pickerview_customTextSize">false</bool>
 
 
-    <!-- +++++++++++++++++++++++++++萤石摄像头+++++++++++++++++++++++++ -->
+    <!-- ++++++++++++++++++++++++++++++++++   萤石摄像头    +++++++++++++++++++++++++++++++++++++++ -->
     <dimen name="title_button_padding">15dp</dimen>
     <dimen name="device_set_padding">15dp</dimen>
     <dimen name="device_set_arrow_padding">10dp</dimen>

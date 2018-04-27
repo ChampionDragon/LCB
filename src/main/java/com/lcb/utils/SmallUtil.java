@@ -132,9 +132,7 @@ public class SmallUtil {
             sb.append((stmp.length() == 1) ? "0" + stmp : stmp);
             // sb.append(" ");//每个Byte值之间空格分隔
         }
-
         return sb.toString().toUpperCase(Locale.getDefault()).trim();
-
     }
 
     /**

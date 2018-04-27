@@ -45,9 +45,7 @@ public class PickviewActivity extends BaseActivity {
         tvOptions = (TextView) findViewById(R.id.tvOptions);
         tv_single_option = (TextView) findViewById(R.id.tv_single_option);
 
-
-
-        // 时间选择
+/*++++++++++++++++++++++++++++++++ =============时间选择=============== ++++++++++++++++++++++++++++++*/
         tvTime.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -57,7 +55,7 @@ public class PickviewActivity extends BaseActivity {
             }
         });
 
-        // 单项选择
+/*++++++++++++++++++++++++++++++   ==============单项选择器==============  +++++++++++++++++++++++++++++++++*/
         for (int i = 0; i <= 10; i++) {
             mList.add(new TypeBean(i, "item" + i));
         }
@@ -65,7 +63,7 @@ public class PickviewActivity extends BaseActivity {
         tv_single_option.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pickerViewUtil.alertBottomWheelOption(PickviewActivity.this, "自定义标题", mList, new pickerViewUtil.OnWheelViewClick() {
+pickerViewUtil.alertBottomWheelOption(PickviewActivity.this, "自定义标题", mList, new pickerViewUtil.OnWheelViewClick() {
                     @Override
                     public void onClick(View view, int postion) {
                         Toast.makeText(PickviewActivity.this, mList.get(postion).getName(), Toast.LENGTH_SHORT).show();
@@ -74,8 +72,7 @@ public class PickviewActivity extends BaseActivity {
             }
         });
 
-
-        //点击弹出选项选择器
+/*++++++++++++++++++++++++++++++  ===============多项选择器======================  ++++++++++++++++++++++*/
         tvOptions.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -85,10 +82,14 @@ public class PickviewActivity extends BaseActivity {
 
     }
 
+
     private void showOptions() {
         // 初始化三个列表数据
         DataModel.initData(options1Items, options2Items, options3Items);
-        new pickerViewUtil().optionPicker(this, "请选择城市", onOptionsSelectListener, options1Items, options2Items, options3Items);
+        /*设置标题0-3个*/
+        String[] labels = {"省"};
+        new pickerViewUtil().optionPicker(this, "请选择城市", onOptionsSelectListener,
+                options1Items, options2Items, options3Items, labels);
     }
 
 

@@ -25,7 +25,6 @@ public class DialogNotileUtil {
         Button bt = (Button) view.findViewById(R.id.notile_bt);
         if (null == listener) {
             bt.setOnClickListener(new OnClickListener() {
-
                 @Override
                 public void onClick(View v) {
                     dialog.dismiss();

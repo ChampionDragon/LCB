@@ -6,6 +6,7 @@
     <RelativeLayout style="@style/tt" >
 
         <TextView
+            android:id="@+id/localvideo_tv"
             style="@style/tt_tv"
             android:layout_centerInParent="true"
             android:text="选择视频" />

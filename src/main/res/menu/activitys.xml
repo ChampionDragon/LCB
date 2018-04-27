@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    >
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/menu_one"
-        android:icon="@drawable/ad4"
-        android:title="圆点变化趋势曲线图"/>
+        android:title="圆点变化趋势曲线图" />
     <item
         android:id="@+id/menu_two"
-        android:icon="@drawable/ad2"
-        android:title="滚轮控件"/>
+        android:title="滚轮控件" />
     <item
         android:id="@+id/menu_three"
-        android:icon="@drawable/ad1"
-        android:title="切换系统语言"/>
+        android:title="切换系统语言" />
+    <item
+        android:id="@+id/menu_four"
+        android:title="登录弹框" />
+    <item
+        android:id="@+id/menu_five"
+        android:title="手动输入设备ID" />
 
 </menu>
