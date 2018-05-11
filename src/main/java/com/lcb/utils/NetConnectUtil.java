@@ -1,10 +1,10 @@
 package com.lcb.utils;
 
-import com.lcb.base.BaseApplication;
-
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+
+import com.lcb.base.BaseApplication;
 
 public class NetConnectUtil {
 	static Context context = BaseApplication.context;

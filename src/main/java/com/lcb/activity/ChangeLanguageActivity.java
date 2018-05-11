@@ -74,7 +74,7 @@ public class ChangeLanguageActivity extends BaseActivity {
      * 点击出弹框
      */
     private void BottomWheelOption() {
-        pickerViewUtil.alertBottomWheelOption(ChangeLanguageActivity.this, "自定义标题", list, new pickerViewUtil.OnWheelViewClick() {
+        pickerViewUtil.alertBottomWheelOption(ChangeLanguageActivity.this, "请选择系统语言", list, new pickerViewUtil.OnWheelViewClick() {
             @Override
             public void onClick(View view, int postion) {
                 judgeLanguage(list.get(postion));

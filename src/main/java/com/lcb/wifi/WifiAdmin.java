@@ -144,7 +144,7 @@ public class WifiAdmin {
 				Toast.makeText(context, "WiFi没有开启", Toast.LENGTH_SHORT).show();
 			}
 		} else {
-			mWifiList = new ArrayList<ScanResult>();
+			mWifiList = new ArrayList<>();
 			for (ScanResult result : results) {
 				if (result.SSID == null || result.SSID.length() == 0
 						|| result.capabilities.contains("[IBSS]")) {
@@ -242,7 +242,6 @@ public class WifiAdmin {
 	}
 
 	// 创建wifi热点的。
-
 	public WifiConfiguration CreateWifiInfo(String SSID, String Password,
 			int Type) {
 		WifiConfiguration config = new WifiConfiguration();

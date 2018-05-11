@@ -46,8 +46,10 @@ public class DialogLoading {
     }
 
     public void show() {
-        mLoadingDialog.show();
-        mLoadingView.startAnim();
+        if (mLoadingDialog != null) {
+            mLoadingDialog.show();
+            mLoadingView.startAnim();
+        }
     }
 
     public void close() {

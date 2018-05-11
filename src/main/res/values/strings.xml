@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">龙成斌的DEMO</string>
+    <string name="app_name">龙成斌</string>
     <string name="action_settings">Settings</string>
     <string name="check_wifi_state">检查WIFi状态</string>
     <string name="scan_wifi">扫描附近WiFi</string>
     <string name="open_wifi">打开WiFi</string>
     <string name="close_wifi">关闭WiFi</string>
 
+    <!--LCD显示屏-->
+    <string name="onoffInterval">1.设置的这个时间是相对现在系统的时间。\n2.比如:开机间隔设为1:45关机设置为0:30\n3.当你点击\"保存设置\"系统将会在半小时内关机,关机后的1小时45分后开机\n4.设定时间间隔可选的范围为:0小时0分~59小时59分</string>
 
+    <string name="onoffset">1.设置定时开关时间后,每天都生效,即是周期为1天。\n2.断电源重启后,MCU将复位,此定时开关时间将丢失。\n3.定时关机时间必须在定时开机时间之前。如果定时开机时间在定时关机时间之前,必须先自动关机。</string>
     <!-- 测试 -->
     <string name="load">222</string>
     <string name="lastUpdateTime" formatted="false">%s　第二个占位符　 %d</string>
@@ -345,7 +348,7 @@
     <string name="auto_wifi_tip_connecting_wifi_ok">已配置好Wi-Fi网络</string>
     <string name="auto_wifi_tip_connecting_wifi">连接Wi-Fi网络</string>
     <!-- 下列字符为消除xml警告而定义 -->
-    <string name="describtion"/>
+    <string name="describtion" />
     <string name="auto_wifi_tip_connecting_wifi_ing">萤小石正在努力配置Wi-Fi网络</string>
     <string name="auto_wifi_tip_connecting_server_ing">快了快了，正在注册到萤石平台</string>
     <string name="auto_wifi_tip_connecting_server_ok">已注册到萤石平台</string>
@@ -494,6 +497,7 @@
     <string name="title_activity_anim">animActivity</string>
     <string name="title_activity_spannable_string">SpannableStringActivity</string>
     <string name="title_activity_notification">NotificationActivity</string>
+    <string name="title_activity_plate_num">PlateNumActivity</string>
 
 
 </resources>

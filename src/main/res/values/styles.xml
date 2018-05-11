@@ -12,7 +12,7 @@
         <item name="android:textColor">@drawable/wifi_text_color</item>
     </style>
 
-    <!--   +++++++++++++mainActivity的style++++++++++++++++++++++++++++++ -->
+    <!--   +++++++++++++++++++++++      mainActivity的style    ++++++++++++++++++++++++++++++ -->
     <style name="mainStyle" parent="AppTheme">
         <item name="android:popupMenuStyle">@style/popmenuStyle</item>
         <item name="android:dropDownListViewStyle">@style/popmenuDivier</item>
@@ -144,6 +144,84 @@
         <item name="itemSelector">@drawable/grouplayout_item_bg_selector</item>
         <item name="dividerPadding">@dimen/device_set_padding</item>
         <item name="android:background">@android:color/white</item>
+    </style>
+
+
+    <!--+++++++++++++++++++++++++++++++++++++  GridPasswordView的样式  +++++++++++++++++++++++++++++++++++++++++-->
+    <style name="GridPasswordView"/>
+
+    <style name="GridPasswordView.TextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="GridPasswordView.EditText" parent="GridPasswordView.TextView">
+        <item name="android:cursorVisible">false</item>
+    </style>
+
+    <style name="GridPasswordView.Divider">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:layout_marginBottom">1dp</item>
+    </style>
+
+    <!--+++++++++++++++++++++++++++++++++++++++++++++++++  LCD屏的样式 +++++++++++++++++++++++++++++++++++++++++++++++-->
+    <style name="LcdHeightSplit">
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="LcdWidthSplit">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="LcdMainTv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="LcdMainIv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <!--LCD屏的title的样式  -->
+    <style name="lcdtt">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">168dp</item>
+        <item name="android:background">@color/blueSky</item>
+    </style>
+
+    <style name="lcdtt_tv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">66sp</item>
+    </style>
+
+    <style name="lcdtt_iv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">66dp</item>
+    </style>
+
+    <!--设置switch字体大小-->
+    <style name="onoffswitch" parent="@style/TextAppearance.AppCompat.Widget.Switch">
+        <item name="android:textSize">23sp</item>
+        <item name="android:textColor">#ffffff</item>
     </style>
 
 

@@ -13,6 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import static android.R.id.list;
+
 public class chartViewActivity extends AppCompatActivity {
     private PPChart chart;
 

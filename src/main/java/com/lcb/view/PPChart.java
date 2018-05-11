@@ -17,7 +17,7 @@ import android.view.ViewConfiguration;
 
 import com.lcb.R;
 import com.lcb.bean.dataObject;
-import com.lcb.utils.DPUnitUtil;
+import com.lcb.utils.DPUtil;
 
 import java.util.List;
 
@@ -69,9 +69,9 @@ public class PPChart extends View {
         super(context, attrs);
         mContext = context;
         //触发移动事件的最短距离 ViewConfiguration.get(context).getScaledDoubleTapSlop();
-        a = (int) DPUnitUtil.px2dp(context, ViewConfiguration.get(context).getScaledDoubleTapSlop());
+        a = (int) DPUtil.px2dp(context, ViewConfiguration.get(context).getScaledDoubleTapSlop());
         setClickable(true);
-        lineWidth = (int) DPUnitUtil.dp2px(mContext, 1);
+        lineWidth = (int) DPUtil.dp2px(mContext, 1);
     }
 
 

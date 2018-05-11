@@ -125,6 +125,9 @@ public class OptionsPickerView<T> extends BasePickerView implements View.OnClick
     public void setCyclic(boolean cyclic1, boolean cyclic2, boolean cyclic3) {
         wheelOptions.setCyclic(cyclic1, cyclic2, cyclic3);
     }
+    public void setCyclic(boolean cyclic1, boolean cyclic2) {
+        wheelOptions.setCyclic(cyclic1, cyclic2);
+    }
 
 
     @Override
@@ -158,16 +161,12 @@ public class OptionsPickerView<T> extends BasePickerView implements View.OnClick
 
     /**
      * 设置文字大小
+     *
      * @param textSize
      */
     public void setTextSize(float textSize) {
         wheelOptions.setTextSize(textSize);
     }
 
-    /**
-     * Created by Administrator on 2017/8/3.
-     */
 
-    public static class TimePickerView {
-    }
 }

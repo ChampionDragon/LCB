@@ -16,9 +16,9 @@ public class Constant {
     public final static String urlBaiSheng = "https://jxbsmk.1688.com/";
 
     /*更新APK的网址*/
-    public final static String apkUpdate=
+    public final static String apkUpdate =
 //"http://120.203.0.218:30000/img/1.png";
-"http://releases.b0.upaiyun.com/hoolay.apk";
+            "http://releases.b0.upaiyun.com/hoolay.apk";
 
 
     /* 设备连接 */

@@ -57,7 +57,6 @@ public class OneFragment extends Fragment implements OnClickListener {
             case R.id.bt_scan_wifi:
                 SmallUtil.getActivity(getActivity(), WifiListActivity.class);
                 break;
-
             case R.id.bt_start_ap:
                 SmallUtil.getActivity(getActivity(), WifiApActivity.class);
                 break;

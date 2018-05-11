@@ -25,9 +25,8 @@ import static com.lcb.utils.SmallUtil.backgroundAlpaha;
 
 public class pickerViewUtil<T> {
 
-    /**
-     * 时间选择回调
-     */
+
+    /*+++++++++++++++++++++++++++++++++++++++++++   时间选择回调 ++++++++++++++++++++++++++++++++++++++++++++*/
     public interface TimerPickerCallBack {
         void onTimeSelect(String date);
     }
@@ -40,7 +39,8 @@ public class pickerViewUtil<T> {
      * @param format   时间格式化
      * @param callBack 时间选择回调
      */
-    public static void alertTimerPicker(Context context, TimePickerView.Type type, final String format, final TimerPickerCallBack callBack) {
+    public static void alertTimerPicker(Context context, TimePickerView.Type type, final String format, String title, float size,
+                                        final TimerPickerCallBack callBack) {
         TimePickerView pvTime = new TimePickerView(context, type);
         //控制时间范围
         //        Calendar calendar = Calendar.getInstance();
@@ -50,7 +50,7 @@ public class pickerViewUtil<T> {
         /*点击其他部位弹框消失*/
         pvTime.setCancelable(true);
         /*设置顶部标题*/
-        pvTime.setTitle("请选择时间");
+        pvTime.setTitle(title);
         //时间选择后回调
         pvTime.setOnTimeSelectListener(new TimePickerView.OnTimeSelectListener() {
 
@@ -63,13 +63,17 @@ public class pickerViewUtil<T> {
         });
 
         /*时间选择器字体大小*/
-        pvTime.setTextSize(16);
+        pvTime.setTextSize(size);
         //弹出时间选择器
         pvTime.show();
     }
 
+    public static void alertTimerPicker(Context context, TimePickerView.Type type, final String format,
+                                        final TimerPickerCallBack callBack) {
+        alertTimerPicker(context, type, format, "请选择时间", 18, callBack);
+    }
 
-   /* ----------------------------------------------------------------------------------------*/
+   /* -------------------------------------------      单项选择     ------------------------------------------------------*/
 
 
     /**
@@ -96,8 +100,12 @@ public class pickerViewUtil<T> {
         TextView tv_title = (TextView) view.findViewById(R.id.tvTitle);
         final WheelView wv_option = (WheelView) view.findViewById(R.id.wv_option);
         wv_option.setAdapter(new ArrayWheelAdapter(list));
-
         wv_option.setCyclic(false);
+
+        /*设置选项的单位*/
+//        wv_option.setLabel("呵呵");
+        /*设置默认位置*/
+        wv_option.setCurrentItem(0);
 
         /*设置字体大小*/
         wv_option.setTextSize(21);
@@ -147,18 +155,15 @@ public class pickerViewUtil<T> {
         popupWindow.setWidth(ViewGroup.LayoutParams.MATCH_PARENT);
         popupWindow.setHeight(ViewGroup.LayoutParams.MATCH_PARENT);
         backgroundAlpaha((Activity) context, 0.5f);
-        popupWindow.showAtLocation(((ViewGroup) ((Activity) context).findViewById(android.R.id.content)).getChildAt(0), Gravity.CENTER, 0, 0);
+        popupWindow.showAtLocation(((ViewGroup) ((Activity) context).findViewById(android.R.id.content))
+                .getChildAt(0), Gravity.CENTER, 0, 0);
     }
 
-    /* ----------------------------------------------------------------------------------------*/
+    /* --------------------------------   三级别选择器  ------------------------------------------------*/
 
-
-    /**
-     * 三级别选择器
-     */
     public void optionPicker(Context context, String title, OptionsPickerView.OnOptionsSelectListener listener,
                              ArrayList<T> options1Items, ArrayList<ArrayList<T>> options2Items,
-                             ArrayList<ArrayList<ArrayList<T>>> options3Items) {
+                             ArrayList<ArrayList<ArrayList<T>>> options3Items, String[] labels) {
         //选项选择器
         OptionsPickerView pvOptions = new OptionsPickerView(context);
            /*点击其他部位弹框消失*/
@@ -168,23 +173,67 @@ public class pickerViewUtil<T> {
         pvOptions.setPicker(options1Items, options2Items, options3Items, true);
 
         /*设置选择的三级单位,就是在滚轮旁再添加的字体*/
-//        pvOptions.setLabels("省", "市", "区");
-
-            /*选择标题*/
+        if (labels.length == 1) {
+            pvOptions.setLabels(labels[0]);
+        } else if (labels.length == 2) {
+            pvOptions.setLabels(labels[0], labels[1]);
+        } else if (labels.length == 3) {
+            pvOptions.setLabels(labels[0], labels[1], labels[2]);
+        }
+        /*选择标题*/
         pvOptions.setTitle(title);
         pvOptions.setCyclic(false, false, false);
         //设置默认选中的三级项目
-        //监听确定选择按钮
         pvOptions.setSelectOptions(1, 1, 1);
 
         /*设置文字的大小  有个小bug：只有字体大于22第一个item的线才不会错位*/
         pvOptions.setTextSize(22);
-
+        /*监听确定选择按钮*/
         pvOptions.setOnoptionsSelectListener(listener);
-
         pvOptions.show();
+    }
+
+    /*++++++++++++++++++++++++++++++++++++++++++++     二级别选择器   +++++++++++++++++++++++++++++++++++++++++++*/
+
+    /**
+     * @param title    标题
+     * @param listener 结果监听者
+     * @param linkOne  一级目录
+     * @param linkTwo  二级目录
+     * @param labels   设置选项的单位
+     * @param linkage  是否联动
+     */
+    public void twoPicker(Context context, String title,
+                          OptionsPickerView.OnOptionsSelectListener listener, ArrayList<String> linkOne,
+                          ArrayList<ArrayList<String>> linkTwo, String[] labels, boolean linkage) {
 
 
+        //选项选择器
+        OptionsPickerView pvOptions = new OptionsPickerView(context);
+           /*点击其他部位弹框消失*/
+        pvOptions.setCancelable(true);
+
+        //二级联动效果 当为true的时候：次目录会随着上级目录的变动而变动
+        pvOptions.setPicker(linkOne, linkTwo, linkage);
+
+        /*设置选择的三级单位,就是在滚轮旁再添加的字体*/
+        if (labels.length == 1) {
+            pvOptions.setLabels(labels[0]);
+        } else if (labels.length == 2) {
+            pvOptions.setLabels(labels[0], labels[1]);
+        }
+
+        /*选择标题*/
+        pvOptions.setTitle(title);
+        pvOptions.setCyclic(false, false);
+        //设置默认选中二级目录
+        pvOptions.setSelectOptions(0, 0);
+
+        /*设置文字的大小  有个小bug：只有字体大于22第一个item的线才不会错位*/
+        pvOptions.setTextSize(33);
+        /*监听确定选择按钮*/
+        pvOptions.setOnoptionsSelectListener(listener);
+        pvOptions.show();
     }
 
 

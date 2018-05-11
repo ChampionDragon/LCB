@@ -49,5 +49,15 @@
         android:layout_marginTop="10dp"
         android:text="yyyy-MM"/>
 
+    <TextView
+        android:id="@+id/timepicker_tv"
+        android:textColor="@color/blueSky"
+        android:gravity="center_horizontal"
+        android:textSize="22sp"
+        android:text="设置系统时间"
+        android:layout_marginTop="33dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
 
 </LinearLayout>

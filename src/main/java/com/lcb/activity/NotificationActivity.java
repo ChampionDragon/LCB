@@ -23,13 +23,13 @@ import com.lcb.utils.Logs;
 public class NotificationActivity extends BaseActivity implements View.OnClickListener {
     private Intent intentService;
     private DownloadService.MyBinder binder;
-    String tag="Notification";
+    String tag = "Notification";
 
 
     private ServiceConnection connnection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
-            Logs.d(tag+ " 29    " + "onServiceConnected");
+            Logs.d(tag + " 29    " + "onServiceConnected");
             binder = (DownloadService.MyBinder) service;
             binder.startDownload();
         }
@@ -37,7 +37,7 @@ public class NotificationActivity extends BaseActivity implements View.OnClickLi
         @Override
         public void onServiceDisconnected(ComponentName name) {
 //onServiceDisconnected()正常情况下是不被调用的，它的调用时机是当Service服务被异外销毁时，例如内存的资源不足时这个方法才被自动调用。
-            Logs.d(tag+ " 36    " + "onServiceDisconnected");
+            Logs.d(tag + " 36    " + "onServiceDisconnected");
         }
     };
 
@@ -47,7 +47,7 @@ public class NotificationActivity extends BaseActivity implements View.OnClickLi
         setContentView(R.layout.activity_notification);
         initView();
         intentService = new Intent(this, DownloadService.class);
-        intentService.putExtra("apkUrl","APK下载地址");
+        intentService.putExtra("apkUrl", "APK下载地址");
     }
 
     /**
@@ -62,7 +62,6 @@ public class NotificationActivity extends BaseActivity implements View.OnClickLi
         builder1.setContentTitle("通知"); //设置标题
         builder1.setContentText("点击查看详细内容"); //设置接收消息后，将状态栏下拉后的消息内容
         builder1.setWhen(System.currentTimeMillis()); //发送时间
-
         /*设置振动效果：延迟0ms，然后振动900ms，在延迟1500ms，接着在振动1700ms。*/
         builder1.setVibrate(new long[]{0, 900, 1500, 1700});
         /*调用系统多媒体库内的铃声*/

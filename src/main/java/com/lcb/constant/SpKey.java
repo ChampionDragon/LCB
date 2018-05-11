@@ -14,4 +14,8 @@ public class SpKey {
     public static final String applanguage = "applanguage";//判断上次APP的语言
 
 
+    /*登录的Dialog*/
+    public static final String diaUser="diaUser";
+    public static final String diaPwd="diaPwd";
+
 }

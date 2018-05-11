@@ -263,5 +263,22 @@ public class SystemUtil {
 		width = dm.widthPixels;
 		return width;
 	}
+    /**
+     * 返回系统屏幕密度
+     */
+    public static float Density() {
+        DisplayMetrics dm = context.getResources().getDisplayMetrics();
+        float density = dm.density;
+        return density;
+    }
+
+    /**
+     * 返回系统屏幕密度比
+     */
+    public static int densityDpi() {
+        DisplayMetrics dm = context.getResources().getDisplayMetrics();
+        int densityDpi = dm.densityDpi;
+        return densityDpi;
+    }
 
 }

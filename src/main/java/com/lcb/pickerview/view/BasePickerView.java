@@ -27,7 +27,7 @@ public class BasePickerView {
     private Context context;
     protected ViewGroup contentContainer;
     private ViewGroup decorView;//activity的根View
-    private ViewGroup rootView;//附加View 的 根View
+    private ViewGroup rootView;//附加View的根View
 
     private OnDismissListener onDismissListener;
     private boolean isDismissing;

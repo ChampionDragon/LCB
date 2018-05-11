@@ -3,20 +3,20 @@ package com.lcb.pickerview;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
-import android.widget.Toast;
+import android.widget.TextView;
 
 import com.lcb.R;
 import com.lcb.base.BaseActivity;
 import com.lcb.pickerview.other.pickerViewUtil;
 
-public class TimepickerActivity extends BaseActivity implements View.OnClickListener{
+public class TimepickerActivity extends BaseActivity implements View.OnClickListener {
+    private TextView tv;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_timepicker);
-
+        tv = (TextView) findViewById(R.id.timepicker_tv);
         findViewById(R.id.btn_ymdhm).setOnClickListener(this);
         findViewById(R.id.btn_ymdh).setOnClickListener(this);
         findViewById(R.id.btn_ymd).setOnClickListener(this);
@@ -33,7 +33,7 @@ public class TimepickerActivity extends BaseActivity implements View.OnClickList
         switch (v.getId()) {
             case R.id.btn_ymdhm:
                 type = TimePickerView.Type.ALL;
-                format = "yyyy-MM-dd HH:mm";
+                format = "yyyy年MM月dd HH时mm分";
                 break;
             case R.id.btn_ymdh:
                 type = TimePickerView.Type.YEAR_MONTH_DAY_HOUR;
@@ -59,7 +59,7 @@ public class TimepickerActivity extends BaseActivity implements View.OnClickList
         pickerViewUtil.alertTimerPicker(this, type, format, new pickerViewUtil.TimerPickerCallBack() {
             @Override
             public void onTimeSelect(String date) {
-                Toast.makeText(TimepickerActivity.this, date, Toast.LENGTH_SHORT).show();
+                tv.setText("系统时间设为\n" + date);
             }
         });
 

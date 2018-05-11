@@ -13,8 +13,10 @@ import android.view.View;
 import android.view.animation.LinearInterpolator;
 
 /**
- * Created by Administrator on 2017/6/19.
- */
+ * Description: 自定义滚轮View
+ * AUTHOR: Champion Dragon
+ * created at 2017/11/13
+ **/
 
 public class CircularRing extends View{
     private float mWidth = 0f;
